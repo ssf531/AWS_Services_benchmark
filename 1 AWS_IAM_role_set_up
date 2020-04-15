@@ -1,0 +1,34 @@
+aws create-role --role-name <value> --assume-role-policy-document <value>
+
+# Create the role and attach the trust policy file
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "apigateway.amazonaws.com",
+          "lambda.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+# Attach the permissions policy
+# put-role-policy--role-name <value> --policy-name <value> --policy-document <value>
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "logs:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

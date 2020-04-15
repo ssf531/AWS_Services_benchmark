@@ -1,0 +1,11 @@
+# Create Lambdas with different languages by AWS Console, there are default Hello-world Lambdas
+
+###Steps:
+
+#Create a lambda function from AWS Lambda console and enter the name
+
+#Choose the correct runtime
+
+#Select the execution role that just created above
+
+#Click Create the function

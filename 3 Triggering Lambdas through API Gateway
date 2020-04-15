@@ -1,0 +1,16 @@
+
+# Go to API Gateway in the AWS Console.
+
+# Create a new API, select Rest 
+
+# Then create a stage 
+
+# Create a resource (enable CORS)
+
+# Within that resource, create a method GET, enable Use Lambda Proxy Integration (enter the name of your function that been triggered)
+
+# Click save and click deploy 
+
+# The endpoint URL will like: https://(...).execute-api.ap-southeast-2.amazonaws.com/test/py-hello
+
+# Then we can use Artillery for testing

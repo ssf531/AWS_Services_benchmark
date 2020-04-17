@@ -1,0 +1,11 @@
+
+filter @message like /(?i)(Init Duration)/ 
+| parse "Init Duration: * " as InitDuration
+
+filter @message not like /(?i)(Init Duration)/
+| filter @message  like /(?i)( Duration)/
+| parse "Duration: * " as Duration
+
+fields @maxMemoryUsed  
+| parse "Max Memory Used: * MB" as MaxMemoryUsed
+| stats max(MaxMemoryUsed)

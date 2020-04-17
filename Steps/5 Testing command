@@ -1,0 +1,32 @@
+npm install --global serverless
+npm install --global artillery
+npm install --global serverless-artillery
+
+#py3.7 test
+###
+Options for quick:
+
+-d, --duration <seconds>     Set duration (in seconds)
+-r, --rate <number>          Set arrival rate (per second)
+-p, --payload <string>       Set payload (POST request body)
+-t, --content-type <string>  Set content-type
+-o, --output <string>        Set output filename
+-k, --insecure               Turn off TLS certificate verification
+-q, --quiet                  Turn on quiet mode
+###
+
+artillery quick --duration 100 --rate 1 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/output.json   https://().execute-api.ap-southeast-2.amazonaws.com/test/py-hello
+artillery quick -q --duration 10 --rate 30 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/py-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/py-hello
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/java-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/java
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/py-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/py
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/js-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/js
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/cs-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/cs
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/go-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/go
+
+artillery quick --duration 100 --rate 20 -n 1 -o /Users/ssf/Project-mac/AWS/benchmark/ruby-output.json  https://().execute-api.ap-southeast-2.amazonaws.com/test/ruby
+
